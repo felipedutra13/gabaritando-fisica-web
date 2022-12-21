@@ -85,7 +85,7 @@ const Home = () => {
                     type="text"
                     placeholder="Nome completo"
                     required={true}
-                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a]"
+                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a] w-[204px]"
                     onChange={onChangeName}
                   />
                 </div>
@@ -130,7 +130,7 @@ const Home = () => {
                     placeholder="E-mail"
                     required={true}
                     onChange={onChangeEmail}
-                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a]"
+                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a] w-[204px]"
                   />
                 </div>
                 {showAlert ?
@@ -155,8 +155,10 @@ const Home = () => {
 
             </div>
           </div>
-          <div className="relative top-[72px] w-[350px] h-[350px] xl:top-[-34px] xl:w-[1080px] xl:h-[1080px]">
-            <Image src={image1} alt="Gabaritando Física" />
+          <div className="flex justify-center">
+            <div className="relative top-[72px] w-[246px] h-[246px] xl:top-[-34px] xl:w-[1080px] xl:h-[1080px]">
+              <Image src={image1} alt="Gabaritando Física" />
+            </div>
           </div>
         </div>
       </div >
@@ -221,7 +223,7 @@ const Home = () => {
 
           <div className="xl:flex xl:flex-row p-5">
             <div className="relative h-[240px] w-[240px] xl:h-[240px] xl:w-[240px] left-14 xl:left-0">
-              <Image src={cover} layout="fill" objectFit="cover"/>
+              <Image src={cover} layout="fill" objectFit="cover" />
             </div>
 
             <div className="xl:w-4/5 xl:pt-5 flex justify-center">
