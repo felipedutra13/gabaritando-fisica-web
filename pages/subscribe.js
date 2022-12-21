@@ -13,7 +13,7 @@ const Subscribe = () => {
 
     return (
         <div className="bg-[#c93d33] h-screen flex xl:justify-center xl:items-center">
-            <div className="xl:flex xl:flex-row relative top-5 xl:top-0">
+            <div className="xl:flex xl:flex-row pt-5 xl:top-0">
 
                 <div className="flex justify-center items-center">
                     <div className="relative h-[240px] w-[240px] xl:h-[480px] xl:w-[480px]">
@@ -34,10 +34,15 @@ const Subscribe = () => {
                                 </div>
                             </Button>
                         </div>
+
                     </div>
                 </div>
 
             </div>
+            <div className="absolute bottom-0 left-0 text-center w-full text-leagueSpartan text-xl text-white">
+                <h1>@gabaritandofisica</h1>
+            </div>
+
         </div>
     )
 };
