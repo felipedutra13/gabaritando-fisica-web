@@ -73,7 +73,7 @@ const Home = () => {
               <h1 className="text-center text-5xl xl:text-8xl 2xl:text-9xl font-leagueSpartan drop-shadow-[5px_4px_1px_rgba(89,9,42,0.55)] text-[#59082a] font-black">Desvendando o PISM</h1>
             </div>
             <div className="flex justify-center pl-2 pr-2">
-              <h2 className="text-2xl xl:text-3xl font-pacifico text-[#59082a] text-center">
+              <h2 className="text-xl xl:text-3xl font-pacifico text-[#59082a] text-center">
                 Descruba todos os segredos por trás da prova de física para acertar mais questões.
               </h2>
             </div>
@@ -85,7 +85,7 @@ const Home = () => {
                     type="text"
                     placeholder="Nome completo"
                     required={true}
-                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a] w-[204px]"
+                    className="text-[#59082a] font-leagueSpartan text-sm xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a] w-[204px]"
                     onChange={onChangeName}
                   />
                 </div>
@@ -94,7 +94,7 @@ const Home = () => {
                     id="modules"
                     required={true}
                     onChange={onChangeModule}
-                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl w-[204px]"
+                    className="text-[#59082a] font-leagueSpartan text-sm xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl w-[204px]"
                     defaultValue={"notSelected"}
                   >
                     <option value="notSelected" disabled>
@@ -130,7 +130,7 @@ const Home = () => {
                     placeholder="E-mail"
                     required={true}
                     onChange={onChangeEmail}
-                    className="text-[#59082a] font-leagueSpartan xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a] w-[204px]"
+                    className="text-[#59082a] font-leagueSpartan text-sm xl:text-xl xl:w-3/4 2xl:text-2xl 2xl:w-1/2 rounded-3xl placeholder-[#59082a] w-[204px]"
                   />
                 </div>
                 {showAlert ?
