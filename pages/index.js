@@ -5,13 +5,16 @@ import { trackPromise } from 'react-promise-tracker';
 import Loading from '../components/Loading';
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
-import cover from '../public/logo-gb.png';
-import image1 from '../public/cover.jpg';
-import image2 from '../public/tmp.jpg';
+import cover from '../public/image5.png';
+import image1 from '../public/image1.png';
+import aula01 from '../public/aula01.jpg';
+import aula02 from '../public/tmp.jpg';
+import aula03 from '../public/aula03.jpg';
 import Image from 'next/image';
 import { Alert } from 'flowbite-react';
 import { HiInformationCircle } from "react-icons/hi";
 import { useRouter } from 'next/router';
+import * as fbq from '../lib/fpixel'
 
 function scrollToTop() {
   window.scrollTo({
@@ -47,6 +50,8 @@ const Home = () => {
       return;
     }
 
+    fbq.event('Subscription', { name, email, pismModule });
+
     try {
       let response = await trackPromise(api.post(`/createStudent`, {
         name,
@@ -71,7 +76,7 @@ const Home = () => {
 
             <div className="relative top-12 2xl:top-64">
               <div className="flex justify-center">
-                <h1 className="text-center text-5xl xl:text-8xl 2xl:text-9xl font-leagueSpartan drop-shadow-[5px_4px_1px_rgba(89,9,42,0.55)] text-[#59082a] font-black">Desvendando o PISM</h1>
+                <h1 className="text-center text-5xl xl:text-8xl 2xl:text-9xl font-leagueSpartan drop-shadow-[5px_4px_1px_rgba(89,9,42,0.55)] text-[#59082a] font-black">Desvendando a Física do PISM</h1>
               </div>
               <div className="flex justify-center pl-2 pr-2">
                 <h2 className="text-xl xl:text-3xl font-pacifico text-[#59082a] text-center">
@@ -157,7 +162,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex justify-center xl:block xl:justify-start">
-              <div className="relative top-[72px] w-[246px] h-[246px] xl:top-[-34px] xl:w-[691px] xl:h-[691px]">
+              <div className="relative top-[72px] w-[226px] h-[226px] xl:top-[-34px] xl:w-[691px] xl:h-[691px]">
                 <Image src={image1} alt="Gabaritando Física" />
               </div>
             </div>
@@ -175,44 +180,51 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="p-5 grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-center">
+          <div className="p-5 grid sm:grid-cols-2 md:grid-cols-3 xl:flex">
 
-            <div className="bg-[#e3b5a0]">
-              <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 01</h1>
-              <div className="pl-5 pr-5">
-                <Image src={image2} alt="Aula 01" width={300} height={150} />
+            <div className="bg-[#e3b5a0] md:w-1/3">
+              <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 01 - 23/01</h1>
+              <div className="justify-center flex">
+                <div className="pl-5 pr-5 relative w-[300px] h-[200px]">
+                  <Image src={aula01} alt="Aula 01" fill={true} />
+                  {/* <h1>TESTE</h1> */}
+                </div>
               </div>
               <h3 className="font-leagueSpartan text-lg text-center text-[#59082a] font-bold">O conteúdo programático de física e a melhor sequência de estudos.</h3>
               <h4 className="font-leagueSpartan text-lg text-justify text-[#f1eeee] pl-4 pr-4">Nesta aula, eu vou te apresentar todo o conteúdo programático do seu módulo e lhe mostrarei qual a melhor sequência didática para estudá-lo ao longo do ano.</h4>
             </div>
 
-            <div className="bg-[#db9280]">
-              <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 02</h1>
-              <div className="pl-5 pr-5">
-                <Image src={image2} alt="Aula 02" height={150} width={300} />
+            <div className="bg-[#db9280] md:w-1/3">
+              <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 02 - 24/01</h1>
+              <div className="justify-center flex">
+                <div className="pl-5 pr-5 relative w-[300px] h-[200px]">
+                  <Image src={aula02} alt="Aula 02" fill={true} />
+                </div>
               </div>
               <h3 className="font-leagueSpartan text-lg text-center text-[#59082a] font-bold">Os conteúdos  recorrentes: só eles bastam para ser APROVADO?</h3>
               <h4 className="font-leagueSpartan text-lg text-justify text-[#f1eeee] pl-4 pr-4">Nesta aula, você conhecerá os conteúdos de física com maior recorrência na prova, mas também descobrirá se estudando apenas eles, conseguirá ser aprovado em um curso de alta concorrência.</h4>
             </div>
 
-            <div className="bg-[#d17a65]">
-              <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 03</h1>
-              <div className="pl-5 pr-5">
-                <Image src={image2} alt="Aula 03" height={150} width={300} />
+            <div className="bg-[#d17a65] md:w-1/3">
+              <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 03 - 25/01</h1>
+              <div className="justify-center flex">
+                <div className="pl-5 pr-5 relative w-[300px] h-[200px]">
+                  <Image src={aula03} alt="Aula 03" fill={true} />
+                </div>
               </div>
               <h3 className="font-leagueSpartan text-lg text-center text-[#59082a] font-bold">As equações mais utilizadas: memorizar NÃO É SUFICIENTE.</h3>
               <h4 className="font-leagueSpartan text-lg text-justify text-[#f1eeee] pl-4 pr-4">Nesta aula, você descobrirá quais são as equações que mais caem na prova. Vou te ensinar uma forma para nunca mais esquecê-las e aplicá-las corretamente nas questões.</h4>
             </div>
 
 
-            <div className="bg-[#cd664d]">
+            {/* <div className="bg-[#cd664d]">
               <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 04</h1>
               <div className="pl-5 pr-5">
                 <Image src={image2} alt="Aula 04" height={150} width={300} />
               </div>
               <h3 className="font-leagueSpartan text-lg text-center text-[#59082a] font-bold">O Método IPEA para solução de questões.</h3>
               <h4 className="font-leagueSpartan text-lg text-justify text-[#f1eeee] pl-4 pr-4">Nesta aula, eu vou lhe apresentar o Método IPEA para solução de questões, e eu garanto que ela vai revolucionar o seu número de acertos.</h4>
-            </div>
+            </div> */}
 
           </div>
 
@@ -220,11 +232,13 @@ const Home = () => {
 
         <div className="bg-[#cd664d] flex h-screen justify-center items-center relative">
           <div>
-            <h1 className="font-pacifico text-4xl text-[#59082a] pl-10">Prazer, Ana Paula!</h1>
+            <div className="flex justify-center">
+              <h1 className="font-pacifico text-4xl text-[#59082a]">Prazer, Ana Paula!</h1>
+            </div>
 
             <div className="xl:flex xl:flex-row p-5">
-              <div className="relative h-[240px] w-[240px] xl:h-[240px] xl:w-[240px] left-14 xl:left-0">
-                <Image src={cover} layout="fill" objectFit="cover" />
+              <div className="relative h-[120px] w-[120px] xl:h-[240px] xl:w-[240px] left-28 xl:left-0">
+                <Image src={cover} fill={true} />
               </div>
 
               <div className="xl:w-4/5 xl:pt-5 flex justify-center">
