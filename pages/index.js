@@ -162,7 +162,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex justify-center xl:block xl:justify-start">
-              <div className="relative top-[72px] w-[226px] h-[226px] xl:top-[-34px] xl:w-[691px] xl:h-[691px]">
+              <div className="relative top-[72px] w-[226px] h-[226px] xl:top-[10px] xl:w-[600px] xl:h-[600px]">
                 <Image src={image1} alt="Gabaritando Física" />
               </div>
             </div>
@@ -185,9 +185,8 @@ const Home = () => {
             <div className="bg-[#e3b5a0] md:w-1/3">
               <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 01 - 23/01</h1>
               <div className="justify-center flex">
-                <div className="pl-5 pr-5 relative w-[300px] h-[200px]">
+                <div className="pl-5 pr-5 relative w-[250px] h-[150px]">
                   <Image src={aula01} alt="Aula 01" fill={true} />
-                  {/* <h1>TESTE</h1> */}
                 </div>
               </div>
               <h3 className="font-leagueSpartan text-lg text-center text-[#59082a] font-bold">O conteúdo programático de física e a melhor sequência de estudos.</h3>
@@ -197,7 +196,7 @@ const Home = () => {
             <div className="bg-[#db9280] md:w-1/3">
               <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 02 - 24/01</h1>
               <div className="justify-center flex">
-                <div className="pl-5 pr-5 relative w-[300px] h-[200px]">
+                <div className="pl-5 pr-5 relative w-[250px] h-[150px]">
                   <Image src={aula02} alt="Aula 02" fill={true} />
                 </div>
               </div>
@@ -208,7 +207,7 @@ const Home = () => {
             <div className="bg-[#d17a65] md:w-1/3">
               <h1 className="font-leagueSpartan text-lg text-center font-bold">Aula 03 - 25/01</h1>
               <div className="justify-center flex">
-                <div className="pl-5 pr-5 relative w-[300px] h-[200px]">
+                <div className="pl-5 pr-5 relative w-[250px] h-[150px]">
                   <Image src={aula03} alt="Aula 03" fill={true} />
                 </div>
               </div>
