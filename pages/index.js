@@ -80,7 +80,7 @@ const Home = () => {
               </div>
               <div className="flex justify-center pl-2 pr-2">
                 <h2 className="text-xl xl:text-3xl font-pacifico text-[#59082a] text-center">
-                  Descruba todos os segredos por trás da prova de física para acertar mais questões.
+                  Descubra todos os segredos por trás da prova de física para acertar mais questões.
                 </h2>
               </div>
               <div className="relative top-5">
