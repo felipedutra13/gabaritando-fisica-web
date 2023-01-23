@@ -10,7 +10,7 @@ const Subscribe = () => {
     const router = useRouter();
 
     async function handleWhatsappButton() {
-        router.push('https://chat.whatsapp.com/JY97tEBHRn7C7edkussouE');
+        router.push('https://chat.whatsapp.com/BjK5Q7aQ3vnLxwnWMwk53Y');
     }
 
     useEffect(() => {
